@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dark Crystal Game</title>
+
+  <!-- Link to reset -->
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+  <!-- Link to my css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- Link to jquery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div id="background-container">
+    <!-- Elements needed on page: -->
+    <!-- Game title -->
+    <h1>Heal the Dark Crystal!</h1>
+
+    <!-- Should have instructions ***EDIT BEFORE FINAL*** -->
+    <section id="instructions">
+      <p>The evil Skeksis have shattered the Dark Crystal and brought forth a terrible evil! It's up to you to help our heroes repair the crystal fragments and restore good to the world!</p>
+      <p>The number displayed is your target. By clicking on each hero character, you'll increase your score by an amount. Pay attention to how much each hero adds to your score! To win each round, you need to MATCH the target number without going over.</p>
+    </section>
+
+    <!-- Want crystal background image; ideal if this aligns with it -->
+    <!-- Div for targetNumber -->
+    <div id="target-number"></div>
+
+    <!-- Four divs with ids for button images; use <ul>? -->
+    <!-- Leave as empty div for now -->
+    <div id="crystal-heroes"></div>
+
+    <section class="player">
+      <h3>Your total so-far:</h3>
+      <!-- Div for player score -->
+      <div id="player-score"></div>
+    </section>
+
+    <!-- Div for total wins & losses -->
+    <section id="wins-losses"></section>
+
+    <!-- DON'T FORGET TO LINK THE GAME.JS************* -->
+    <!-- Link to my js -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </div>
+</body>
+
+</html>
