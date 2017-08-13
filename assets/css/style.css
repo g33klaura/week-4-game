@@ -1,0 +1,19 @@
+/* Try pink dust background */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("../images/bkgd_pinkdust.png");
+	color: White;
+}
+
+/*
+#background-container {
+	background-image: url("../images/crystal-shard-large.jpg");
+	background-position: center;
+	background-repeat: cover;
+}
+*/
+
