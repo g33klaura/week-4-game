@@ -17,3 +17,14 @@ body {
 }
 */
 
+/* YESSSSS they're next to each other now!!!!!! <fanfare> */
+/* No touchy */
+ul li {
+	display: inline-block;
+}
+
+/* Replace these placeholder images later; may need diff sizing */
+li img {
+      width: 300px;
+      height: 300px;
+    }
