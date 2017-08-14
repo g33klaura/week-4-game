@@ -28,20 +28,23 @@
 /* VARIABLES=======================================
  */
 // Start whole game as an object! Check this********
-var crystalGameObject = {
+//var crystalGameObject = {
 
-    // Know I'll need this, not sure where yet...
-    $(document).ready(function() {
+    // Know I'll need this, not sure where yet... 
+    //Don't forget to uncomment the closing brace below
+//    $(document).ready(function() {
 
         // Target random number is btwn 19-120
         // HOW TO SET 19 AS START MIN VALUE?????????
-        var targetNumber = function getRandomIntInclusive(19, 120) {
-            min = Math.ceil(19);
-            max = Math.floor(120);
-            return Math.floor(Math.random() * (120 - 19 + 1));
+    /*   var targetNumber = function getRandomInt(19, 120) {
+            //min = Math.ceil(19);
+            //max = Math.floor(120);
+            return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         };
+    */
+        var targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
         // FOR TESTING
-        console.log(targetNumber);
+        console.log('Target number: ' + targetNumber);
 
         // target id '#target-number'
         $('#target-number').text(targetNumber);
@@ -59,7 +62,7 @@ var crystalGameObject = {
 
         var heroValues = Math.floor(Math.random() * 12);
         // FOR TESTING
-        console.log(heroValues);
+        console.log('A hero image value: ' + heroValues);
         // or
         // var heroValues = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         // target class '.crystal-heroes'
@@ -93,7 +96,7 @@ var crystalGameObject = {
          */
 
 
-    });
+//    });
     // ^^This closes the opening $(document).ready function
-}
+// }
 // ^^This closing curly brace closes the whole game object
