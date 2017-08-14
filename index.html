@@ -2,77 +2,67 @@
 <html>
 
 <head>
-  <title>Dark Crystal Game</title>
-
-  <!-- Link to reset -->
-  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-
-  <!-- Link to GoogleFonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Neuton" rel="stylesheet">
-
-  <!-- Link to my css -->
-  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-  <!-- Link to jquery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+    <title>Dark Crystal Game</title>
+    <!-- Link to reset -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Link to GoogleFonts -->
+    <link href="https://fonts.googleapis.com/css?family=Fugaz+One|Neuton" rel="stylesheet">
+    <!-- Link to my css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Link to jquery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
-  <div id="background-container">
-    <!-- Elements needed on page: -->
-    <!-- Game title -->
-    <h1>Save the World! Heal the Dark Crystal!</h1>
-
-    <!-- Should have instructions ***EDIT BEFORE FINAL*** -->
-    <section id="instructions">
-      <p>The evil Skeksis have shattered the Dark Crystal and brought forth chaos! It's up to you to help our heroes repair the crystal fragments and restore the balance and peace to the world!
-      </p>
-      <p>The number displayed is your target. By clicking on each hero character, you'll increase your score by an amount. Pay attention to how much each hero adds to your score! To win each round, you need to MATCH the target number without going over.
-      </p>
-    </section>
-
-    <!-- Want crystal background image; ideal if this aligns with it -->
-    <!-- Div for targetNumber -->
-    <h2>Number to reach: <span id="target-number"></span></h2>
-
-    <!-- Four divs with ids for "button" images; use <ul>? -->
-    <!-- Is this div w/ id necessary? -->
-    <div class="crystal-heroes">
-      <ul>
-        <li>
-        <!-- Try first placeholder image here -->
-        <img src="assets/images/01holder.jpg" />
-        </li>
-        <li>
-        <!-- 2nd -->
-        <img src="assets/images/02holder.jpg" />
-        </li>
-        <li>
-        <!-- 3rd -->
-        <img src="assets/images/03holder.jpg" />
-        </li>
-        <li>
-        <!-- 4th -->
-        <img src="assets/images/04holder.jpg" />
-        </li>
-      </ul>
+    <div id="background-container">
+        <!-- Elements needed on page: -->
+        <!-- Game title -->
+        <h1>Save the World! Heal the Dark Crystal!</h1>
+        <!-- Should have instructions ***EDIT BEFORE FINAL*** -->
+        <section id="instructions">
+            <p>The evil Skeksis have shattered the Dark Crystal and brought forth chaos! It's up to you to help our heroes repair the crystal fragments and restore the balance and peace to the world!
+            </p>
+            <p>The number displayed is your target. By clicking on each hero character, you'll increase your score by an amount. Pay attention to how much each hero adds to your score! To win each round, you need to MATCH the target number without going over.
+            </p>
+        </section>
+        <!-- Want crystal background image; ideal if this aligns with it -->
+        <!-- Div for targetNumber -->
+        <h2>Number to reach: <span id="target-number"></span></h2>
+        <section class="player">
+            <h2>Your total so-far: </h2>
+            <!-- Div for player score -->
+            <div id="player-score"></div>
+        </section>
+        <!-- Four divs with ids for "button" images; use <ul>? -->
+        <!-- Is this div w/ id necessary? -->
+        <div class="crystal-heroes">
+            <ul>
+                <li>
+                    <!-- Try first placeholder image here -->
+                    <img src="assets/images/01holder.jpg" />
+                </li>
+                <li>
+                    <!-- 2nd -->
+                    <img src="assets/images/02holder.jpg" />
+                </li>
+                <li>
+                    <!-- 3rd -->
+                    <img src="assets/images/03holder.jpg" />
+                </li>
+                <li>
+                    <!-- 4th -->
+                    <img src="assets/images/04holder.jpg" />
+                </li>
+            </ul>
+        </div>
+        <!-- Div for total wins & losses -->
+        <section id="wins-losses">
+            <p id="wins">Wins: </p>
+            <p id="losses">Losses: </p>
+        </section>
+        <!-- Link to my js -->
+        <script type="text/javascript" src="assets/javascript/game.js"></script>
     </div>
-
-    <section class="player">
-      <h2>Your total so-far: </h2>
-      <!-- Div for player score -->
-      <div id="player-score"></div>
-    </section>
-
-    <!-- Div for total wins & losses -->
-    <section id="wins-losses"></section>
-
-
-    <!-- Link to my js -->
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
-    
-  </div>
 </body>
 
 </html>
