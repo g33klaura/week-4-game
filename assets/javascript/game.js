@@ -61,23 +61,12 @@ var wins = 0;
 var losses = 0;
 
 
-// Variable to hold value options for each button (hero images)
-// Each random number is btwn 1-12; Needs to NOT include 0  ~FIXED
-// values WORKS
-var values = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
-// FOR TESTING
-console.log('A hero image value: ' + values);
-// or
-// var values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-// target class '.crystal-heroes'
 
 
 
 
 /* FUNCTIONS=======================================
  */
-
-
 
 
 // Crystal game example generates the same image and assigns value to that. I want different images, and 4 not 12..........
@@ -96,7 +85,16 @@ for (var crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalH
     console.log(crystalHeroIndex);
 
     //Assign random number from values to each element in crystalHeroes array
-    console.log(this);
+
+
+// Variable to hold value options for each button (hero images)
+// Each random number is btwn 1-12; Needs to NOT include 0  ~FIXED
+// values WORKS
+
+    var values = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+// FOR TESTING
+    console.log('A hero image value: ' + values);
+
 
     //append(values)
 }
@@ -109,20 +107,18 @@ for (var crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalH
 $('.crystal-heroes').on('click', function() {   
     //console.log('1st was clicked');
     console.log('Any image was clicked');
-});
-
 
 
 
 // THIS WAS FROM EXAMPLE GAME - BUT MY IMAGES ARE STATIC ON PAGE..... NEEDS RENAMING. SEE ABOVE.
-    $('.hero-image').on('click', function() {
+   // $('.hero-image').on('click', function() {
 
-        var heroValue = ($(this).attr('data-herovalue'));
+    var imgValue = ($(this).attr('data-imagevalue'));
     //this parseInt will make sure the numbers stay numbers rather than being returned as a string
-        heroValue = parseInt(heroValue);
+        imgValue = parseInt(imgValue);
     // We then add the crystalValue to the user's "counter" which is a global variable.
     // Every click, from every crystal adds to the global counter.
-        playerCounter += heroValue;
+        playerCounter += imgValue;
 
     //empty div for '#player-score'
 
@@ -142,12 +138,12 @@ $('.crystal-heroes').on('click', function() {
         //'#losses'
          }
 
-        });
+});
 
 
 
 });
-// ^^This SHOULD closes the opening $(document).ready function, but it's NOT
+// ^^This closes the opening $(document).ready function
 
 
 
