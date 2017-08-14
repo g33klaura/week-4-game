@@ -1,12 +1,19 @@
-/* Try pink dust background */
+/* GoogleFonts to use:
+font-family: 'Fugaz One', cursive;
+font-family: 'Neuton', serif;
+*/
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-	background-image: url("../images/bkgd_pinkdust.png");
-	color: White;
+    background-image: url("../images/bkgd_pinkdust.png");
+    margin: 50px;
+    font-family: 'Neuton', serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: White;
 }
 
 /*
@@ -17,14 +24,31 @@ body {
 }
 */
 
-/* YESSSSS they're next to each other now!!!!!! <fanfare> */
-/* No touchy */
-ul li {
-	display: inline-block;
+h1 {
+    font-family: 'Fugaz One', cursive;
+    font-size: 48px;
+    line-height: 60px;
+    color: FireBrick;
+    /* Orchid is nice too. Red matches Dark Crystal title logo */
 }
 
+h2 {
+	font-family: 'Fugaz One', cursive;
+	font-size: 28px;
+	color: MediumPurple;
+}
+
+/* YESSSSS they're next to each other now!!!!!! <fanfare> */
+/* No touchy */
+
+ul li {
+    display: inline-block;
+}
+
+
 /* Replace these placeholder images later; may need diff sizing */
+
 li img {
-      width: 300px;
-      height: 300px;
-    }
+    width: 300px;
+    height: 300px;
+}
