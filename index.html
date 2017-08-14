@@ -14,8 +14,10 @@
 </head>
 
 <body>
+<!-- Want crystal background image; ideal if target-number aligns with it sortof -->
     <div id="background-container">
-        <!-- Elements needed on page: -->
+
+       
         <!-- Game title -->
         <h1>Save the World! Heal the Dark Crystal!</h1>
         <!-- Should have instructions ***EDIT BEFORE FINAL*** -->
@@ -25,7 +27,8 @@
             <p>The number displayed is your target. By clicking on each hero character, you'll increase your score by an amount. Pay attention to how much each hero adds to your score! To win each round, you need to MATCH the target number without going over.
             </p>
         </section>
-        <!-- Want crystal background image; ideal if this aligns with it -->
+
+        
         <!-- Div for targetNumber -->
         <h2>Number to reach: <span id="target-number"></span></h2>
         <section class="player">
@@ -33,33 +36,35 @@
             <!-- Div for player score -->
             <div id="player-score"></div>
         </section>
-        <!-- Four divs with ids for "button" images; use <ul>? -->
-        <!-- Is this div w/ id necessary? -->
-        <div class="crystal-heroes">
+        
+        <!-- Div to hold button images -->
+        <section class="crystal-heroes">
             <ul>
                 <li>
                     <!-- First placeholder image here -->
                     <img id="1st" src="assets/images/01holder.jpg" />
                 </li>
                 <li>
-                    <!-- 2nd -->
+                    <!-- 2nd placeholder -->
                     <img id="2nd" src="assets/images/02holder.jpg" />
                 </li>
                 <li>
-                    <!-- 3rd -->
+                    <!-- 3rd placeholder -->
                     <img id="3rd" src="assets/images/03holder.jpg" />
                 </li>
                 <li>
-                    <!-- 4th -->
+                    <!-- 4th placeholder -->
                     <img id="4th" src="assets/images/04holder.jpg" />
                 </li>
             </ul>
-        </div>
+        </section>
+
         <!-- Div for total wins & losses -->
         <section class="game-score">
             <p id="wins">Wins: </p>
             <p id="losses">Losses: </p>
         </section>
+
         <!-- Link to my js -->
         <script type="text/javascript" src="assets/javascript/game.js"></script>
     </div>
