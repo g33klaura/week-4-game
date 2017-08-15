@@ -1,6 +1,8 @@
 /* GoogleFonts to use:
 font-family: 'Fugaz One', cursive;
 font-family: 'Neuton', serif;
+font-family: 'Overlock', cursive;
+font-family: 'Chela One', cursive;
 */
 
 * {
@@ -10,7 +12,8 @@ font-family: 'Neuton', serif;
 body {
     background-image: url("../images/bkgd_pinkdust.png");
     margin: 50px;
-    font-family: 'Neuton', serif;
+    /*font-family: 'Neuton', serif;*/
+    font-family: 'Overlock', cursive;
     font-size: 18px;
     line-height: 22px;
     color: White;
@@ -18,14 +21,15 @@ body {
 
 /*
 #background-container {
-	background-image: url("../images/crystal-shard-large.jpg");
-	background-position: center;
-	background-repeat: cover;
+	background-image: url("../images/TheDarkCrystal-CeremonyOfTheSun.jpg");
+	background-position: bottom;
+	background-repeat: no-repeat;
 }
 */
 
 h1 {
-    font-family: 'Fugaz One', cursive;
+    /*font-family: 'Fugaz One', cursive;*/
+    font-family: 'Chela One', cursive;
     font-size: 48px;
     line-height: 60px;
     color: Orchid;
@@ -33,7 +37,8 @@ h1 {
 }
 
 h2 {
-	font-family: 'Fugaz One', cursive;
+	/*font-family: 'Fugaz One', cursive;*/
+	font-family: 'Chela One', cursive;
 	font-size: 28px;
 	color: MediumPurple;
 }
@@ -45,10 +50,8 @@ ul li {
     display: inline-block;
 }
 
-
-/* Replace these placeholder images later; may need diff sizing */
-
 li img {
     width: 300px;
-    height: 300px;
+    height: 200px;
 }
+
