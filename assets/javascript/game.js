@@ -44,6 +44,8 @@ $(document).ready(function() {
         };
     */
 
+// Does this need to be a function to get reset on round end?
+
     // targetNumber WORKS
     var targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
     // FOR TESTING
@@ -75,6 +77,8 @@ $(document).ready(function() {
     // Variable for number of images buttons
     var crystalHeroes = ['1st', '2nd', '3rd', '4th'];
 
+//function assignToImages() {
+
     for (var crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalHeroIndex++) {
 
         //console.log(crystalHeroes);
@@ -95,6 +99,9 @@ $(document).ready(function() {
 
     }
 
+//}
+
+
     // Function to check if the random number image value is being repetative or not
     function checkForRandomness(numbToCheck, crystalHeroIndex) {
 
@@ -104,16 +111,20 @@ $(document).ready(function() {
 
             checkForRandomness(numbToCheck, crystalHeroIndex);
 
-            console.log('if: ' + numbToCheck);
+            console.log('No. from if statement: ' + numbToCheck);
 
         } else {
             $('#' + crystalHeroes[crystalHeroIndex]).attr('data-imagevalue', numbToCheck);
             holderArray.push(numbToCheck);
         }
 
-        console.log('else: ' + numbToCheck);
+        console.log('No. from else statement: ' + numbToCheck);
     }
 
+
+
+/* MAIN PROCESS=======================================
+ */
 
 
     // Images can be clicked on WORKS
@@ -129,12 +140,12 @@ $(document).ready(function() {
         console.log('This is the image\'s value: ' + imgValue);
 
 
-        //this parseInt will make sure the numbers stay numbers rather than being returned as a string
+        //this parseInt will make sure the numbers stay numbers (integers) rather than being returned as a string
 
         imgValue = parseInt(imgValue);
 
-        // We then add the crystalValue to the user's "counter" which is a global variable.
-        // Every click, from every crystal adds to the global counter.
+        // Add the image's value to the players's "counter" which is a global variable
+        // Every click, from every images adds to the global counter
         playerCounter += imgValue;
 
         //empty div for '#player-score'
@@ -151,6 +162,7 @@ $(document).ready(function() {
             console.log('You win');
             //alert("You win!");
 
+            reWriteStats();
            
 
             // SHOULD THIS JUST BE ELSE?
@@ -161,10 +173,21 @@ $(document).ready(function() {
             console.log('You lose');
             //alert("You lose!!");
 
+            reWriteStats();
 
         }
 
     });
+
+// Reset function, STILL NEEDS TO GENERATE NEW NUMBERS
+function reWriteStats() {
+    
+    //targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+
+    playerCounter = 0;
+
+    //assignToImages();
+}
 
 
 
@@ -173,8 +196,7 @@ $(document).ready(function() {
 
 
 
-/* MAIN PROCESS=======================================
- */
+
 
 
 
