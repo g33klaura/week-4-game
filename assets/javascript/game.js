@@ -77,6 +77,7 @@ $(document).ready(function() {
     // Variable for number of images buttons
     var crystalHeroes = ['1st', '2nd', '3rd', '4th'];
 
+//Trying to make this function work so I can reset the image values on reset
 //function assignToImages() {
 
     for (var crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalHeroIndex++) {
@@ -96,10 +97,7 @@ $(document).ready(function() {
         checkForRandomness(value, crystalHeroIndex);
         // FOR TESTING
         //console.log('An image value: ' + value);
-
     }
-
-//}
 
 
     // Function to check if the random number image value is being repetative or not
@@ -116,10 +114,13 @@ $(document).ready(function() {
         } else {
             $('#' + crystalHeroes[crystalHeroIndex]).attr('data-imagevalue', numbToCheck);
             holderArray.push(numbToCheck);
-        }
+            
+            console.log('No. from else statement: ' + numbToCheck);
 
-        console.log('No. from else statement: ' + numbToCheck);
+        }
     }
+
+//}  --this goes to the function I keep trying to make to be able to reset the image values
 
 
 
@@ -182,11 +183,15 @@ $(document).ready(function() {
 // Reset function, STILL NEEDS TO GENERATE NEW NUMBERS
 function reWriteStats() {
     
-    //targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+    targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+    console.log('Reset targetNumber: ' + targetNumber);
+    $('#target-number').text(targetNumber);
 
     playerCounter = 0;
+    $('#player-score').empty();
 
     //assignToImages();
+    //$('#crystal-heroes').empty();
 }
 
 
