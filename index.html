@@ -14,10 +14,8 @@
 </head>
 
 <body>
-<!-- Want crystal background image; ideal if target-number aligns with it sortof -->
+    <!-- Want crystal background image; ideal if target-number aligns with it sortof -->
     <div id="background-container">
-
-       
         <!-- Game title -->
         <h1>Save the World! Heal the Dark Crystal!</h1>
         <!-- Should have instructions ***EDIT BEFORE FINAL*** -->
@@ -27,16 +25,12 @@
             <p>The number displayed is your target. By clicking on each hero character, you'll increase your score by an amount. Pay attention to how much each hero adds to your score! To win each round, you need to MATCH the target number without going over.
             </p>
         </section>
-
-        
         <!-- Div for targetNumber -->
         <h2>Number to reach: <span id="target-number"></span></h2>
         <section class="player">
-            <h2>Your total so-far: </h2>
             <!-- Div for player score -->
-            <div id="player-score"></div>
+            <h2>Your total so-far: <span id="player-score"></span></h2>
         </section>
-        
         <!-- Div to hold button images -->
         <section class="images">
             <ul>
@@ -58,13 +52,11 @@
                 </li>
             </ul>
         </section>
-
         <!-- Div for total wins & losses -->
         <section class="game-score">
-            <p id="wins">Wins: </p>
-            <p id="losses">Losses: </p>
+            <h2>Wins: <span id="wins"></span></h2>
+            <h2>Losses: <span id="losses"></span></h2>
         </section>
-
         <!-- Link to my js -->
         <script type="text/javascript" src="assets/javascript/game.js"></script>
     </div>
