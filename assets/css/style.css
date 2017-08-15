@@ -11,8 +11,8 @@ body {
     background-image: url("../images/bkgd_pinkdust.png");
     margin: 50px;
     font-family: 'Neuton', serif;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 22px;
     color: White;
 }
 
@@ -28,8 +28,8 @@ h1 {
     font-family: 'Fugaz One', cursive;
     font-size: 48px;
     line-height: 60px;
-    color: FireBrick;
-    /* Orchid is nice too. Red matches Dark Crystal title logo */
+    color: Orchid;
+    /* FireBrick matches Dark Crystal title logo */
 }
 
 h2 {
