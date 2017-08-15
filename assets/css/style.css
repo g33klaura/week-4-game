@@ -55,3 +55,9 @@ li img {
     height: 200px;
 }
 
+#poster {
+	width: 30%;
+	height: 30%;
+	position: relative;
+	float: right;
+}

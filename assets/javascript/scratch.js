@@ -21,6 +21,15 @@ Did this if/else statement before turning it into a function to get the random n
 
 
 
+/*   var targetNumber = function getRandomInt(19, 120) {
+            //min = Math.ceil(19);
+            //max = Math.floor(120);
+            return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+        };
+*/
+
+
+
 /* Want fancy fade in/out on hover if can get imageClick function to work!!
 function imageClick() {    
     $('#1st').mouseenter(function() {

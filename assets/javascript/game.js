@@ -37,12 +37,6 @@
 $(document).ready(function() {
 
     // Target random number is btwn 19-120  ~FIXED
-    /*   var targetNumber = function getRandomInt(19, 120) {
-            //min = Math.ceil(19);
-            //max = Math.floor(120);
-            return Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-        };
-    */
 
 // Does this need to be a function to get reset on round end?
 
@@ -86,7 +80,6 @@ $(document).ready(function() {
         //console.log(crystalHeroIndex);
 
         //Assign random number from values to each element in crystalHeroes array
-
 
         // Variable to hold value options for each button (hero images)
         // Each random number is btwn 1-12; Needs to NOT include 0  ~FIXED
@@ -192,6 +185,19 @@ function reWriteStats() {
 
     //assignToImages();
     //$('#crystal-heroes').empty();
+
+    // Trying to recall the code that creates the four random image values....
+    
+    for (crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalHeroIndex++) {
+
+        value = Math.floor(Math.random() * (12 - 1)) + 1;
+       
+        checkForRandomness(value, crystalHeroIndex);
+        // FOR TESTING
+        console.log('RESET image value: ' + value);
+
+        //Can this just call the checkForRandomness()? - NOPE
+    }
 }
 
 
