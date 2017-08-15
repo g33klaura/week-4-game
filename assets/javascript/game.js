@@ -91,13 +91,17 @@ for (var crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalH
 // Each random number is btwn 1-12; Needs to NOT include 0  ~FIXED
 // values WORKS
 
-    var values = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+    var value = Math.floor(Math.random() * (12 - 1)) + 1;
 // FOR TESTING
-    console.log('A hero image value: ' + values);
+    console.log('A hero image value: ' + value);
 
+// NEED A WAY TO KEEP THE SAME NUMBER FROM GENERATING FOR MULTIPLE IMAGES
+
+$('#' + crystalHeroes[crystalHeroIndex]).attr('data-imagevalue', value);
 
     //append(values)
 }
+
 
 
 // Why doesn't this work inside of a function???
@@ -105,17 +109,33 @@ for (var crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalH
 // Images can be clicked on WORKS
 //$('#1st').on('click', function() {
 $('.crystal-heroes').on('click', function() {   
-    //console.log('1st was clicked');
-    console.log('Any image was clicked');
+    //    console.log('1st was clicked');
+    //    console.log('Any image was clicked');
+
+    console.log($(this));
 
 
+// FROM EXAMPLE: Each imageCrystal will be given a data attribute called data-crystalValue.
+    // This data attribute will be set equal to the array value.
+
+/*
+    imgValue.attr('data-imagevalue', crystalHeroes[crystalHeroIndex]);
+    console.log(addValueToImage);
+
+*/
 
 // THIS WAS FROM EXAMPLE GAME - BUT MY IMAGES ARE STATIC ON PAGE..... NEEDS RENAMING. SEE ABOVE.
    // $('.hero-image').on('click', function() {
 
     var imgValue = ($(this).attr('data-imagevalue'));
+        
+        console.log('This is the image\'s value: ' + imgValue);
+
+
     //this parseInt will make sure the numbers stay numbers rather than being returned as a string
-        imgValue = parseInt(imgValue);
+       
+        imgValue = parseInt(value);
+
     // We then add the crystalValue to the user's "counter" which is a global variable.
     // Every click, from every crystal adds to the global counter.
         playerCounter += imgValue;
