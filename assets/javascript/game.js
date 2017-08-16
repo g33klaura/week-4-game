@@ -72,7 +72,7 @@ $(document).ready(function() {
     var crystalHeroes = ['1st', '2nd', '3rd', '4th'];
 
 //Trying to make this function work so I can reset the image values on reset
-//function assignToImages() {
+function assignToImages() {
 
     for (var crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalHeroIndex++) {
 
@@ -91,7 +91,6 @@ $(document).ready(function() {
         // FOR TESTING
         //console.log('An image value: ' + value);
     }
-
 
     // Function to check if the random number image value is being repetative or not
     function checkForRandomness(numbToCheck, crystalHeroIndex) {
@@ -113,13 +112,13 @@ $(document).ready(function() {
         }
     }
 
-//}  --this goes to the function I keep trying to make to be able to reset the image values
-
-
+}
 
 /* MAIN PROCESS=======================================
  */
 
+// Call function to populate random image values
+assignToImages();
 
     // Images can be clicked on WORKS
     //$('#1st').on('click', function() {
@@ -159,7 +158,6 @@ $(document).ready(function() {
             reWriteStats();
            
 
-            // SHOULD THIS JUST BE ELSE?
         } else if (playerCounter > targetNumber) {
             
             $('#losses').text(++losses);
@@ -183,39 +181,11 @@ function reWriteStats() {
     playerCounter = 0;
     $('#player-score').empty();
 
-    //assignToImages();
+    assignToImages();
     //$('#crystal-heroes').empty();
 
-    // Trying to recall the code that creates the four random image values....
-    
-    for (crystalHeroIndex = 0; crystalHeroIndex < crystalHeroes.length; crystalHeroIndex++) {
-
-        value = Math.floor(Math.random() * (12 - 1)) + 1;
-       
-        checkForRandomness(value, crystalHeroIndex);
-        // FOR TESTING
-        console.log('RESET image value: ' + value);
-
-        //Can this just call the checkForRandomness()? - NOPE
     }
-}
-
 
 
 });
 // ^^This closes the opening $(document).ready function
-
-
-
-
-
-
-
-
-// }
-// ^^This closing curly brace closes the whole game object
-
-
-
-// git add assets/javascript/game.js
-// git add assets/css/style.css
