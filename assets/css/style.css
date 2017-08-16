@@ -1,26 +1,17 @@
-/* GoogleFonts to use:
-font-family: 'Fugaz One', cursive;
-font-family: 'Neuton', serif;
-font-family: 'Overlock', cursive;
-font-family: 'Chela One', cursive;
-*/
-
 * {
     box-sizing: border-box;
 }
 
 body {
     background-image: url("../images/bkgd_pinkdust.png");
-    /*margin: 50px;*/
-    /*font-family: 'Neuton', serif;*/
     font-family: 'Overlock', cursive;
     font-size: 18px;
     line-height: 22px;
     color: White;
 }
 
-/* CHANGING NAME TO CONTAINER
-#background-container {
+/* TAKE THIS OUT IF TAKING TOO LONG TO ALIGN WELL
+.container {
 	background-image: url("../images/TheDarkCrystal-CeremonyOfTheSun.jpg");
 	background-position: bottom;
 	background-repeat: no-repeat;
@@ -28,7 +19,6 @@ body {
 */
 
 h1 {
-    /*font-family: 'Fugaz One', cursive;*/
     font-family: 'Chela One', cursive;
     font-size: 48px;
     line-height: 60px;
@@ -38,11 +28,22 @@ h1 {
 }
 
 h2 {
-	/*font-family: 'Fugaz One', cursive;*/
 	font-family: 'Chela One', cursive;
-	font-size: 28px;
+	font-size: 32px;
 	color: MediumPurple;
 }
+
+section.player h2 {
+	color: FireBrick;
+}
+
+.col-md-4, .col-md-3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
 
 /*
 .crystal-heroes {
@@ -60,13 +61,6 @@ h2 {
 	margin-right: auto;
 }
 */
-
-.col-md-4, .col-md-3 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-}
 
 /* YESSSSS they're next to each other now!!!!!! <fanfare> */
 /* No touchy */
