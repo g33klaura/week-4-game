@@ -19,7 +19,7 @@ body {
     color: White;
 }
 
-/*
+/* CHANGING NAME TO CONTAINER
 #background-container {
 	background-image: url("../images/TheDarkCrystal-CeremonyOfTheSun.jpg");
 	background-position: bottom;
@@ -32,6 +32,7 @@ h1 {
     font-family: 'Chela One', cursive;
     font-size: 48px;
     line-height: 60px;
+    text-align: center;
     color: Orchid;
     /* FireBrick matches Dark Crystal title logo */
 }
@@ -45,7 +46,7 @@ h2 {
 
 /* YESSSSS they're next to each other now!!!!!! <fanfare> */
 /* No touchy */
-
+/* ~But after applying Bootstrap, these are no longer necessary
 ul li {
     display: inline-block;
 }
@@ -54,10 +55,17 @@ li img {
     width: 300px;
     height: 200px;
 }
+*/
+
+/* #instructions p {
+	position: relative;
+	float: left;
+}
+*/
 
 #poster {
-	width: 30%;
-	height: 30%;
+	width: 10%;
+	height: 10%;
 	position: relative;
-	float: right;
+	/*float: right;*/
 }
