@@ -11,7 +11,7 @@ font-family: 'Chela One', cursive;
 
 body {
     background-image: url("../images/bkgd_pinkdust.png");
-    margin: 50px;
+    /*margin: 50px;*/
     /*font-family: 'Neuton', serif;*/
     font-family: 'Overlock', cursive;
     font-size: 18px;
@@ -44,9 +44,33 @@ h2 {
 	color: MediumPurple;
 }
 
+/*
+.crystal-heroes {
+	center-block()
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+*/
+
+/*
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+*/
+
+.col-md-4, .col-md-3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
 /* YESSSSS they're next to each other now!!!!!! <fanfare> */
 /* No touchy */
-/* ~But after applying Bootstrap, these are no longer necessary
+/* ~But after applying Bootstrap, these are no longer necessary. Wah waah.
 ul li {
     display: inline-block;
 }
@@ -62,10 +86,3 @@ li img {
 	float: left;
 }
 */
-
-#poster {
-	width: 10%;
-	height: 10%;
-	position: relative;
-	/*float: right;*/
-}
