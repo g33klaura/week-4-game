@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Dark Crystal Game</title>
     <!-- Link to reset HIDE FOR BOOTSTRAP -->
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
@@ -15,64 +14,94 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!-- Link to jquery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
+  </head>
+  <body>
+    <!-- Overall container for Bootstrap -->
+    <div class="container">
+      <!-- Row div for game title -->
+      <div class="row">
+        <!-- Bootstrap column size div (one column of 12) -->
+        <div class="col-md-12">
+          <!-- Game title -->
+          <h1>Save the World! Heal the Dark Crystal!</h1>
+          <br>
+        </div>
+      </div>
 
-<body>
-    <!-- Want crystal background image; ideal if target-number aligns with it sortof -->
-    <div id="background-container">
-        <!-- Game title -->
-        <h1>Save the World! Heal the Dark Crystal!</h1>
-        <br>
-        <!-- Should have instructions ***EDIT BEFORE FINAL*** -->
-        <section id="instructions">
-            <p>The evil Skeksis have shattered the Dark Crystal and brought forth chaos! It's up to you to help our heroes repair the crystal fragments and restore the balance and peace to the world!
-            </p>
-            <p>The number displayed is your target. By clicking on each hero character, you'll increase your score by an amount. Pay attention to how much each hero adds to your score! To win each round, you need to MATCH the target number without going over.
-            </p>
-            <aside id="poster"><img src="assets/images/Poster-darkcrystal.jpg" /></aside>
-        </section>
-
-        <br>
-        <br>
-        <!-- Div for targetNumber -->
-        <h2>Number to reach: <span id="target-number"></span></h2>
-        <br>
-        <section class="player">
-            <!-- Div for player score -->
-            <h2>Your total so-far: <span id="player-score"></span></h2>
-        </section>
-        <br>
-        <!-- Div to hold button images -->
-        <section class="images">
-            <ul>
-                <li>
-                    <!-- First placeholder image here -->
-                    <img class="crystal-heroes" id="1st" src="assets/images/jen.jpg" />
-                </li>
-                <li>
-                    <!-- 2nd placeholder -->
-                    <img class="crystal-heroes" id="2nd" src="assets/images/fizzgig.jpg" />
-                </li>
-                <li>
-                    <!-- 3rd placeholder -->
-                    <img class="crystal-heroes" id="3rd" src="assets/images/kira.jpg" />
-                </li>
-                <li>
-                    <!-- 4th placeholder -->
-                    <img class="crystal-heroes" id="4th" src="assets/images/aughra.jpg" />
-                </li>
-            </ul>
-        </section>
-        <br>
-        <!-- Div for total wins & losses -->
-        <section class="game-score">
-            <h2>Wins: <span id="wins"></span></h2>
-            <br>
-            <h2>Losses: <span id="losses"></span></h2>
-        </section>
-        <!-- Link to my js -->
-        <script type="text/javascript" src="assets/javascript/game.js"></script>
+      <!-- Row div for instructions and poster image -->
+      <div class="row">
+        <!-- Bootstrap column size divs (three columns of 4) -->
+        <div class="col-md-4">
+          <!-- <section id="instructions"> -->
+          <p>The evil Skeksis have shattered the Dark Crystal and brought forth chaos! It's up to you to help our heroes repair the crystal fragments and restore the balance and peace to the world!
+          </p>
+        </div>
+        <div class="col-md-4">
+          <p>The number displayed is your target. By clicking on each hero character, you'll increase your score by an amount. Pay attention to how much each hero adds to your score! To win each round, you need to MATCH the target number without going over.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <!-- Change out of aside when using Bootstrap??? -->
+        <aside id="poster"><img src="assets/images/Poster-darkcrystal-sm.jpg" /></aside>
+        <!-- </section> -->
+      </div>
     </div>
-</body>
+    
+    <!-- Row div for targetNumber & Score -->
+    <div class="row">
+      <!-- Bootstrap column size (two columns of 6) -->
+      <div class="col-md-6">
+        <h2>Number to reach: <span id="target-number"></span></h2>
+      </div>
+      <div class="col-md-6">
+        <section class="player">
+          <!-- Div for player score -->
+          <h2>Your total so-far: <span id="player-score"></span></h2>
+        </section>
+      </div>
+    </div>
 
+    <!-- Row div for button images; is <section> redundant now??? -->
+    <div class="row">
+      <!-- SINCE THIS IS AN <UL> WHAT WILL HAPPEN WITH BOOTSTRAP??? -->
+      <section class="images">
+        <ul>
+          <li>
+            <!-- First placeholder image here -->
+            <img class="crystal-heroes" id="1st" src="assets/images/jen.jpg" />
+          </li>
+          <li>
+            <!-- 2nd placeholder -->
+            <img class="crystal-heroes" id="2nd" src="assets/images/fizzgig.jpg" />
+          </li>
+          <li>
+            <!-- 3rd placeholder -->
+            <img class="crystal-heroes" id="3rd" src="assets/images/kira.jpg" />
+          </li>
+          <li>
+            <!-- 4th placeholder -->
+            <img class="crystal-heroes" id="4th" src="assets/images/mystic.jpg" />
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Row div for overall game scoring -->
+    <div class="row">
+      <!-- Bootstrap column size (two columns of 6) -->
+      <section class="col-md-6 game-score">
+        <h2>Wins: <span id="wins"></span></h2>
+      </section>
+      <section class="col-md-6 game-score">
+        <h2>Losses: <span id="losses"></span></h2>
+      </section>
+    </div>
+
+  <!-- Closing div to .container -->
+  </div>
+
+  <!-- Link to my js -->
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+  
+</body>
 </html>
