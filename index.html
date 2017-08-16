@@ -41,76 +41,81 @@
           </p>
         </div>
         <div class="col-md-4">
-          <!-- Change out of aside when using Bootstrap??? -->
-        <img id="poster" src="assets/images/Poster-darkcrystal-sm.jpg" />
+          <!-- Remove <aside> from poster with Bootstrap -->
+          <img id="poster" src="assets/images/Poster-darkcrystal-sm.jpg" />
+          <!-- </section> -->
+        </div>
+      </div>
+      
+      <!-- Row div for targetNumber & Score -->
+      <div class="row">
+        <!-- Bootstrap column size (two columns of 6) -->
+        <div class="col-md-6">
+          <h2>Number to reach: <span id="target-number"></span></h2>
+        </div>
+        <div class="col-md-6">
+          <section class="player">
+            <!-- Div for player score -->
+            <h2>Your total so-far: <span id="player-score"></span></h2>
+          </section>
+        </div>
+      </div>
+
+      <!-- Row div for button images -->
+      <div class="row">
+        <!-- SINCE THIS IS AN <UL> WHAT WILL HAPPEN WITH BOOTSTRAP??? -->
+        <!-- Bootstrap column size (four columns of 3) -->
+        <!-- <section class="images"> -->
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-md-3">
+              <!-- <ul> -->
+              <!-- <li> -->
+              <!-- First hero/button image here -->
+              <img class="crystal-heroes center-block" id="1st" src="assets/images/jen.jpg" />
+              <!-- </li> -->
+              <!-- See if putting 2 images in one column will align them next to each other at 900px screen size - does weird things, revert back!! -->
+            </div>
+            <div class="col-md-3">
+              <!-- <li> -->
+              <!-- 2nd hero/button -->
+              <img class="crystal-heroes center-block" id="2nd" src="assets/images/fizzgig.jpg" />
+              <!-- </li> -->
+            </div>
+            <div class="col-md-3">
+              <!-- <li> -->
+              <!-- 3rd hero/button -->
+              <img class="crystal-heroes center-block" id="3rd" src="assets/images/kira.jpg" />
+              <!-- </li> -->
+            </div>
+            <div class="col-md-3">
+              <!-- <li> -->
+              <!-- 4th hero/button -->
+              <img class="crystal-heroes center-block" id="4th" src="assets/images/mystic.jpg" />
+              <!-- </li> -->
+              <!-- </ul> -->
+            </div>
+          </div>
+        </div>
         <!-- </section> -->
       </div>
-    </div>
-    
-    <!-- Row div for targetNumber & Score -->
-    <div class="row">
-      <!-- Bootstrap column size (two columns of 6) -->
-      <div class="col-md-6">
-        <h2>Number to reach: <span id="target-number"></span></h2>
-      </div>
-      <div class="col-md-6">
-        <section class="player">
-          <!-- Div for player score -->
-          <h2>Your total so-far: <span id="player-score"></span></h2>
+
+      <!-- Row div for overall game scoring -->
+      <div class="row">
+        <!-- Bootstrap column size (two columns of 6) -->
+        <section class="col-md-6 game-score">
+          <h2>Wins: <span id="wins"></span></h2>
+        </section>
+        <section class="col-md-6 game-score">
+          <h2>Losses: <span id="losses"></span></h2>
         </section>
       </div>
+      <!-- Closing div to .container -->
     </div>
 
-    <!-- Row div for button images; is <section> redundant now??? -->
-    <div class="row">
-      <!-- SINCE THIS IS AN <UL> WHAT WILL HAPPEN WITH BOOTSTRAP??? -->
-      <!-- Bootstrap column size (four columns of 3) -->
-      <!-- <section class="images"> -->
-      <div class="col-md-3">
-        <!-- <ul> -->
-          <!-- <li> -->
-            <!-- First hero/button image here -->
-            <img class="crystal-heroes center-block" id="1st" src="assets/images/jen.jpg" />
-          <!-- </li> -->
-      </div>
-      <div class="col-md-3">
-          <!-- <li> -->
-            <!-- 2nd hero/button -->
-            <img class="crystal-heroes center-block" id="2nd" src="assets/images/fizzgig.jpg" />
-          <!-- </li> -->
-      </div>
-      <div class="col-md-3">
-          <!-- <li> -->
-            <!-- 3rd hero/button -->
-            <img class="crystal-heroes center-block" id="3rd" src="assets/images/kira.jpg" />
-          <!-- </li> -->
-      </div>
-      <div class="col-md-3">
-          <!-- <li> -->
-            <!-- 4th hero/button -->
-            <img class="crystal-heroes center-block" id="4th" src="assets/images/mystic.jpg" />
-          <!-- </li> -->
-        <!-- </ul> -->
-      </div>
-      <!-- </section> -->
-    </div>
 
-    <!-- Row div for overall game scoring -->
-    <div class="row">
-      <!-- Bootstrap column size (two columns of 6) -->
-      <section class="col-md-6 game-score">
-        <h2>Wins: <span id="wins"></span></h2>
-      </section>
-      <section class="col-md-6 game-score">
-        <h2>Losses: <span id="losses"></span></h2>
-      </section>
-    </div>
-
-  <!-- Closing div to .container -->
-  </div>
-
-  <!-- Link to my js -->
-  <script type="text/javascript" src="assets/javascript/game.js"></script>
-  
-</body>
+    <!-- Link to my js -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    
+  </body>
 </html>
