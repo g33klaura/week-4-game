@@ -171,7 +171,17 @@ assignToImages();
 
     });
 
-// Reset function, STILL NEEDS TO GENERATE NEW NUMBERS
+
+// Hover button image effects
+$('.crystal-heroes').mouseenter(function() {
+    $(this).fadeTo('fast', 0.5);
+});
+$('.crystal-heroes').mouseleave(function() {
+    $(this).fadeTo('fast', 1);
+});
+
+
+// Reset function: generate new random numbers, reset player score counter
 function reWriteStats() {
     
     targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
