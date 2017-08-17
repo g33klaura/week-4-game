@@ -30,16 +30,24 @@
 
       <!-- Row div for instructions and poster image -->
       <div class="row">
-        <!-- Bootstrap column size divs (three columns of 4) -->
-        <div class="col-md-4">
+        <!-- Bootstrap column size divs (three columns of 4**CHANGED) -->
+      <!-- LEVEL 1: one col 8, one col 4 -->
+      <div class="col-md-8">
+        <div class="row">
+        <!-- LEVEL 2: two col 6 -->
+        <div class="col-md-6">
           <!-- <section id="instructions"> -->
-          <p>The evil Skeksis have shattered the Dark Crystal and brought forth chaos! It's up to you to help our heroes repair the crystal fragments and restore the balance and peace to the world!
+          <p>The evil Skeksis have shattered the Dark Crystal and sent the world into chaos! It's up to you to help our heroes repair the crystal and restore peace!
+          </p>
+          <p>
+          The CRYSTAL TARGET displays a number. To repair the crystal and win, you must reach this number, without going over! Each of our heroes has a randomly generated number value. Click on each of their images to see how much they add to your SCORE. Carefully add hero values to reach the crystal target. Don’t go over, or the round will be lost and evil will prevail!
           </p>
         </div>
-        <div class="col-md-4">
-          <p>The number displayed is your target. By clicking on each hero character, you'll increase your score by an amount. Pay attention to how much each hero adds to your score! To win each round, you need to MATCH the target number without going over.
-          </p>
+        <div class="col-md-6">
+          <h2 id="game-round-alert"></h2>
         </div>
+        </div>
+      </div>
         <div class="col-md-4">
           <!-- Remove <aside> from poster with Bootstrap -->
           <img id="poster" src="assets/images/Poster-darkcrystal-sm.jpg" />
@@ -51,12 +59,12 @@
       <div class="row">
         <!-- Bootstrap column size (two columns of 6) -->
         <div class="col-md-6">
-          <h2>Number to reach: <span id="target-number"></span></h2>
+          <h2>Crystal Target: <span id="target-number"></span></h2>
         </div>
         <div class="col-md-6">
           <section class="player">
             <!-- Div for player score -->
-            <h2>Your total so-far: <span id="player-score"></span></h2>
+            <h2>Your Score: <span id="player-score"></span></h2>
           </section>
         </div>
       </div>
@@ -74,7 +82,7 @@
               <!-- First hero/button image here -->
               <img class="crystal-heroes" id="1st" src="assets/images/kira.jpg" />
               <!-- </li> -->
-              <!-- See if putting 2 images in one column will align them next to each other at 900px screen size - does weird things, revert back!! -->
+              <!-- See if putting 2 images in one column will align them next to each other at 900px screen size ~does weird things, run away!! revert back!! -->
             </div>
             <div class="col-md-3">
               <!-- <li> -->
