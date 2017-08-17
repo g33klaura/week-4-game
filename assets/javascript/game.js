@@ -95,6 +95,9 @@ $(document).ready(function() {
 // ^^This closes the assignToImages() function
 
 
+// Need a function to call, to empty the player score and winlose alert divs??? *sad face*
+
+
 /* MAIN PROCESS=======================================
 */
     // Call function to populate random image values
@@ -125,26 +128,29 @@ $(document).ready(function() {
         //alert("New score: " + playerCounter);
 
         $('#player-score').text(playerCounter);
+        
         if (playerCounter === targetNumber) {
 
             $('#wins').text(++wins);
             
-            //console.log('You win');
+            console.log('You win');
             //alert("You win!");
             
-        // ALERT WIN OR LOSE TO EMPTY DIV    
+        // ALERT WIN OR LOSE TO EMPTY DIV 
+            // $('#game-round-alert').text('Hooray! You\'ve won!!');
 
             // Call function written below to reset the game for another round
             reWriteStats();
 
         } else if (playerCounter > targetNumber) {
-
+            
             $('#losses').text(++losses);
             
-            // console.log('You lose');
+            console.log('You lose');
             //alert("You lose!!");
             
-        // ALERT WIN OR LOSE TO EMPTY DIV  
+        // ALERT WIN OR LOSE TO EMPTY DIV 
+            // $('#game-round-alert').text('Sorry, you\'ve lost.'); 
 
             // Call function to reset the game for another round
             reWriteStats();
@@ -168,10 +174,10 @@ $(document).ready(function() {
         $('#target-number').text(targetNumber);
 
         playerCounter = 0;
-        $('#player-score').empty();
-        
+        //$('#player-score').empty();
+
         assignToImages();
-        //$('#crystal-heroes').empty();
+        //$('#game-round-alert').empty();
     }
 
 });
