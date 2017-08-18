@@ -44,15 +44,15 @@ section.player h2 {
 	align-content: center;
 }
 
-
-/*
-.crystal-heroes {
-	center-block()
+img.crystal-heroes {
+	/*center-block()
 	display: block;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; */
+	/* Don't ~love~ that this skews the images, but is a fix for overlapping issue..... */
+	overflow: hidden;
 }
-*/
+
 
 /*
 .center-block {

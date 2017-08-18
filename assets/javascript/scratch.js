@@ -5,6 +5,12 @@
 *
 */
 
+// cd Documents/UCF_Bootcamp/Projects/week-4-game
+// git add assets/javascript/game.js
+// git add assets/css/style.css
+// git add index.html
+
+
 /* 
 Did this if/else statement before turning it into a function to get the random non-repeating numbers values for the images
 
