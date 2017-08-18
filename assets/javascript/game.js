@@ -33,7 +33,7 @@ $(document).ready(function() {
     // targetNumber WORKS
     var targetNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
     // FOR TESTING
-    // console.log('Target number: ' + targetNumber);
+    console.log('Target number: ' + targetNumber);
 
     // target id '#target-number'
     $('#target-number').text(targetNumber);
@@ -51,8 +51,8 @@ $(document).ready(function() {
     var holderArray = [];
 
 
-/* FUNCTIONS=======================================
-*/
+    /* FUNCTIONS=======================================
+    */
     // Assign .on('click') and values variable to each image?
     // OR, make a new array of 4 (equalling my number of buttons), THEN do the loops & .on('cick') ?  ~THIS ONE!
 
@@ -83,23 +83,32 @@ $(document).ready(function() {
                 numbToCheck = Math.floor(Math.random() * (12 - 1)) + 1;
                 checkForRandomness(numbToCheck, crystalHeroIndex);
                 // FOR TESTING
-                //console.log('No. from if statement: ' + numbToCheck);
+                console.log('Number from if statement: ' + numbToCheck);
             } else {
                 $('#' + crystalHeroes[crystalHeroIndex]).attr('data-imagevalue', numbToCheck);
                 holderArray.push(numbToCheck);
                 // FOR TESTING
-                //console.log('No. from else statement: ' + numbToCheck);
+                console.log('Number from else statement: ' + numbToCheck);
             }
         }
     }
-// ^^This closes the assignToImages() function
+    // ^^This closes the assignToImages() function
 
 
-// Need a function to call, to empty the player score and winlose alert divs??? *sad face*
+    // Hover button image effects
+    $('.crystal-heroes').mouseenter(function() {
+        $(this).fadeTo('fast', 0.5);
+    });
+    $('.crystal-heroes').mouseleave(function() {
+        $(this).fadeTo('fast', 1);
+    });
 
 
-/* MAIN PROCESS=======================================
-*/
+    // Need a function to call, to empty the player score and winlose alert divs??? *sad face*
+
+
+    /* MAIN PROCESS=======================================
+    */
     // Call function to populate random image values
     assignToImages();
 
@@ -113,7 +122,7 @@ $(document).ready(function() {
         // Assigns one of the randomly generated values to each image when clicked on
         var imgValue = ($(this).attr('data-imagevalue'));
         // FOR TESTING
-        // console.log('This is the image\'s value: ' + imgValue);
+        console.log('This image value is: ' + imgValue);
         
 
         //this parseInt will make sure the numbers stay numbers (integers) rather than being returned as a string
@@ -137,7 +146,7 @@ $(document).ready(function() {
             //alert("You win!");
             
         // ALERT WIN OR LOSE TO EMPTY DIV 
-            // $('#game-round-alert').text('Hooray! You\'ve won!!');
+            $('#game-round-alert').html("<h2>'Hooray! You\'ve won!!'</h2>");
 
             // Call function written below to reset the game for another round
             reWriteStats();
@@ -150,21 +159,15 @@ $(document).ready(function() {
             //alert("You lose!!");
             
         // ALERT WIN OR LOSE TO EMPTY DIV 
-            // $('#game-round-alert').text('Sorry, you\'ve lost.'); 
+            $('#game-round-alert').html("<h2>'Sorry, you\'ve lost.'</h2>"); 
 
             // Call function to reset the game for another round
             reWriteStats();
         }
     });
-//  ^^ Closes the .on('click') function
+    //  ^^ Closes the .on('click') function
 
-    // Hover button image effects
-    $('.crystal-heroes').mouseenter(function() {
-        $(this).fadeTo('fast', 0.5);
-    });
-    $('.crystal-heroes').mouseleave(function() {
-        $(this).fadeTo('fast', 1);
-    });
+    
 
     // Reset function: generate new random numbers, reset player score counter, leave total wins/losses alone
     function reWriteStats() {
@@ -176,9 +179,11 @@ $(document).ready(function() {
         playerCounter = 0;
         //$('#player-score').empty();
 
-        assignToImages();
         //$('#game-round-alert').empty();
+
+        assignToImages();
+        
     }
 
 });
-// ^^This closes the opening $(document).ready function
+// ^^This IS SUPPOSED TO CLOSE the opening $(document).ready function, but I can't for the life of me figure out why it won't link to the top of the document anymore
