@@ -4,14 +4,10 @@
     <title>Dark Crystal Game</title>
     <!-- Link to reset HIDE FOR BOOTSTRAP -->
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
-    <!-- Link to jquery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Bootstrap link -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Bootstrap js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Link to GoogleFonts -->
     <link href="https://fonts.googleapis.com/css?family=Chela+One|Overlock" rel="stylesheet">
+    <!-- Bootstrap link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Link to my css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
@@ -27,31 +23,34 @@
           <br>
         </div>
       </div>
-
+      
       <!-- Row div for instructions and poster image -->
       <div class="row">
-        <!-- Bootstrap column size divs (three columns of 4**CHANGED) -->
-      <!-- LEVEL 1: one col 8, one col 4 -->
-      <div class="col-md-8">
-        <div class="row">
-        <!-- LEVEL 2: two col 6 -->
-        <div class="col-md-6">
-          <!-- <section id="instructions"> -->
-          <p>The evil Skeksis have shattered the Dark Crystal and sent the world into chaos! It's up to you to help our heroes repair the crystal and restore peace!
-          </p>
-          <p>
-          The CRYSTAL TARGET displays a number. To repair the crystal and win, you must reach this number, without going over! Each of our heroes has a randomly generated number value. Click on each of their images to see how much they add to your SCORE. Carefully add hero values to reach the crystal target. Don’t go over, or the round will be lost and evil will prevail!
-          </p>
+        <!-- Bootstrap column size divs (three columns of 4) -->
+        
+        <!-- First column for image -->
+        <div class="col-md-4">
+          <img id="poster" src="assets/images/Poster-darkcrystal-sm.jpg" />
         </div>
-        <div class="col-md-6">
+
+        <!-- Second column empty for win/lose alert -->
+        <div class="col-md-4">
           <h2 id="game-round-alert"></h2>
         </div>
-        </div>
-      </div>
+        
         <div class="col-md-4">
-          <!-- Remove <aside> from poster with Bootstrap -->
-          <img id="poster" src="assets/images/Poster-darkcrystal-sm.jpg" />
-          <!-- </section> -->
+          <!-- LEVEL 2: one col 12 for text -->
+          <div class="row">
+            <div class="col-md-12">
+              <p>The evil Skeksis have shattered the Dark Crystal and sent the world into chaos! It's up to you to help our heroes repair the crystal and restore peace!
+              </p>
+              <!-- </div> -->
+              <!-- <div class="col-md-6">  -->
+              <p>
+                The CRYSTAL TARGET displays a number. To repair the crystal and win, you must reach this number, without going over! Each of our heroes has a randomly generated number value. Click on each of their images to see how much they add to your SCORE. Carefully add hero values to reach the crystal target. Do not go over, or the round will be lost and evil will prevail!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       
@@ -68,7 +67,6 @@
           </section>
         </div>
       </div>
-
       <!-- Row div for button images -->
       <div class="row">
         <!-- SINCE THIS IS AN <UL> WHAT WILL HAPPEN WITH BOOTSTRAP??? -->
@@ -107,7 +105,6 @@
         </div>
         <!-- </section> -->
       </div>
-
       <!-- Row div for overall game scoring -->
       <div class="row">
         <!-- Bootstrap column size (two columns of 6) -->
@@ -120,10 +117,13 @@
       </div>
       <!-- Closing div to .container -->
     </div>
-
-
-  <!-- Link to my js -->
-  <script type="text/javascript" src="assets/javascript/game.js"></script>
+    
+    <!-- Link to jquery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Link to my js -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
     
   </body>
 </html>
