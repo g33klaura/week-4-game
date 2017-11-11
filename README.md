@@ -24,7 +24,8 @@ JavaScript, jQuery, CSS, Bootstrap CSS
 ### Game Process
 * The evil Skeksis have shattered the Dark Crystal and sent the world into chaos! It's up to you to help our heroes repair the crystal and restore peace!
 
-![dark-crystal-poster](assets/images/Poster-darkcrystal-sm.jpg)
+<!-- ![dark-crystal-poster](assets/images/Poster-darkcrystal-sm.jpg) -->
+<img align="center" src="assets/images/Poster-darkcrystal-sm.jpg" alt="dark-crystal-poster">
 
 * The CRYSTAL TARGET displays a number. To repair the crystal and win, you must reach this number, without going over! 
 * Each of our heroes has a randomly generated number value. 
